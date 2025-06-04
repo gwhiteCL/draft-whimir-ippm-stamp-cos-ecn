@@ -8,10 +8,13 @@
 <meta content="Greg White" name="author">
 <meta content="Greg Mirsky" name="author">
 <meta content="
-       This document describes an optional extension to the Class of Service
-   monitoring functionality of Simple Two-way Active Measurement
-   Protocol that enables the upstream monitoring of the Explicit
-   Congestion Notification and thus updates RFC 8972. 
+       The Simple Two-Way Active Measurement Protocol (STAMP) enables
+    one-way and round-trip measurement of network metrics between IP hosts, and has a facility for defining
+    optional extensions. This document updates the definition of the Class of Service TLV (originally defined
+    in RFC 8972) to enable the measurement of manipulation of the value of the Explicit Congestion
+    Notification (ECN) field of the IP header by middleboxes between two STAMP hosts, and to
+    enable discovery and measurement of paths that provide differential treatment of packets depending
+    on the value of their ECN field. 
     " name="description">
 <meta content="xml2rfc 3.28.1" name="generator">
 <meta content="stamp" name="keyword">
@@ -1093,10 +1096,13 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <h1 id="title">Update of the Simple Two-way Active Measurement Protocol Class-of-Service Extension - ECN</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">This document describes an optional extension to the Class of Service
-   monitoring functionality of Simple Two-way Active Measurement
-   Protocol that enables the upstream monitoring of the Explicit
-   Congestion Notification and thus updates RFC 8972.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">The Simple Two-Way Active Measurement Protocol (STAMP) enables
+    one-way and round-trip measurement of network metrics between IP hosts, and has a facility for defining
+    optional extensions. This document updates the definition of the Class of Service TLV (originally defined
+    in RFC 8972) to enable the measurement of manipulation of the value of the Explicit Congestion
+    Notification (ECN) field of the IP header by middleboxes between two STAMP hosts, and to
+    enable discovery and measurement of paths that provide differential treatment of packets depending
+    on the value of their ECN field.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <div id="status-of-memo">
 <section id="section-boilerplate.1">
@@ -1202,16 +1208,17 @@ svg :is([fill="white"], [fill^="#fff"]) {
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">   <span>[<a href="#RFC8972" class="cite xref">RFC8972</a>]</span> defined several extensions to Simple Two-way Active
-   Measurement Protocol (STAMP).  Among those is Class of Service (CoS)
-   TLV that enables monitoring of the Differential Services Code Point
-   (DSCP) marking in downstream and upstream directions.  Also, CoS TLV
-   supports downstream monitoring of the Explicit Congestion
-   Notification (ECN).  Experience deploying STAMP and its extensions
+<p id="section-1-1">   <span>[<a href="#RFC8972" class="cite xref">RFC8972</a>]</span> defined several extensions to the Simple Two-way Active
+   Measurement Protocol (STAMP).  Among those is a Class of Service (CoS)
+   TLV that enables measurements that utilize the Differentiated Services Code Point
+   (DSCP) marking in both directions.  Also, the CoS TLV
+   supports outbound measurements that utilize the Explicit Congestion
+   Notification (ECN) field, but it lacked support for such measurements on the return path.
+   Experience deploying STAMP and its extensions
    demonstrated that it is helpful to an operator to monitor ECN's
-   consistency in the upstream direction.  This specification defines
-   the extension of the CoS TLV in a backward compatible manner to
-   support monitoring of ECN in the upstream direction of the STAMP test
+   consistency in both directions.  This specification updates
+   the definition of the CoS TLV in a backward compatible manner to
+   support monitoring of ECN in the return path of the STAMP test
    session.<a href="#section-1-1" class="pilcrow">¶</a></p>
 </section>
 <section id="section-2">
@@ -1303,19 +1310,31 @@ svg :is([fill="white"], [fill^="#fff"]) {
         <li class="normal" id="section-3-4.10">Reserved: twelve-bit field; MUST be zeroed on transmission and ignored on receipt.<a href="#section-3-4.10" class="pilcrow">¶</a>
 </li>
       </ul>
-<p id="section-3-5">A STAMP Session-Reflector that receives a test packet with the CoS TLV MUST include the CoS TLV in the reflected test packet.
-The Session-Reflector MUST copy the value of the DSCP and ECN
-fields of the IP header of the received STAMP test packet into the
-DSCP2 and EC2 fields, respectively, in the CoS TLV in the reflected test packet.
-
-  The Session-Reflector MUST use the local policy to verify whether the use of the value of the DSCP1 field is permitted in the domain. If it is, the Session-Reflector MUST set the DSCP field's value in the IP header of the reflected test packet equal to the value of the DSCP1 field of the received test packet. Otherwise, the Session-Reflector MUST use the DSCP value of the received STAMP packet and set the value of the RPD field to 1. Upon receiving the reflected packet, if the value of the RPD field is 0, the Session-Sender will save the DSCP value for analysis of the CoS in the reverse direction. If the value of the RP field in the received reflected packet is 1, only CoS in the forward direction can be analyzed.<a href="#section-3-5" class="pilcrow">¶</a></p>
-<p id="section-3-6">
-   The Session-Reflector MUST set the ECN value in the IP header of the reflected STAMP test packet to the value of the EC1 field.
-   The Session-Reflector MUST set the RPE
-   field in the CoS TLV in the reflected test packet to the value 0b01.  As a result, the
-   Session-Sender can detect whether the recommended values for DSCP and
-   ECN fields in the reflected packets were used by inspecting the value
-   of the RPD and RPE fields in the received reflected test packet.<a href="#section-3-6" class="pilcrow">¶</a></p>
+<p id="section-3-5">A STAMP Session-Reflector that receives a test packet with the CoS
+      TLV MUST include the CoS TLV in the reflected test packet.
+      The Session-Reflector MUST copy the value of the DSCP and ECN fields of
+      the IP header of the received STAMP test packet into the DSCP2 and EC2
+      fields, respectively, in the CoS TLV in the reflected test packet.
+      The Session-Reflector MUST use the local policy to verify whether the
+      use of the value of the DSCP1 field is permitted in the domain.
+      If it is, the Session-Reflector MUST set the DSCP field's value in the
+      IP header of the reflected test packet equal to the value of the DSCP1
+      field of the received test packet.
+      Otherwise, the Session-Reflector MUST use the DSCP value of the received
+      STAMP packet and set the value of the RPD field to 1.
+      Upon receiving the reflected packet, if the value of the RPD field is 0,
+      the Session-Sender will save the DSCP value for analysis of the CoS in
+      the reverse direction.
+      If the value of the RP field in the received reflected packet is 1, only
+      CoS in the forward direction can be analyzed.<a href="#section-3-5" class="pilcrow">¶</a></p>
+<p id="section-3-6">The Session-Reflector MUST set the ECN value in the IP header of the
+      reflected STAMP test packet to the value of the EC1 field.
+      The Session-Reflector MUST set the RPE field in the CoS TLV in the
+      reflected test packet to the value 0b01.
+      As a result, the Session-Sender can detect whether the recommended
+      values for DSCP and ECN fields in the reflected packets were used by
+      inspecting the value of the RPD and RPE fields in the received
+      reflected test packet.<a href="#section-3-6" class="pilcrow">¶</a></p>
 <section id="section-3.1">
         <h3 id="name-interoperability-with-rfc-8">
 <a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-interoperability-with-rfc-8" class="section-name selfRef">Interoperability with RFC 8972</a>
