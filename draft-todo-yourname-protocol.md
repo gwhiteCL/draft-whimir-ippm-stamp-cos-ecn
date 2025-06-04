@@ -19,11 +19,11 @@
 # Change the file extension to match the format (.xml for XML, etc...)
 #
 ###
-title: "TODO - Your title"
-abbrev: "TODO - Abbreviation"
-category: info
+title: "Update of the Simple Two-way Active Measurement Protocol (STAMP) Class-of-Service Optional Extension - ECN"
+abbrev: "STAMP CoS ECN Update"
+category: std
 
-docname: draft-todo-yourname-protocol-latest
+docname: draft-whimir-ippm-stamp-cos-ecn-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
 date:
