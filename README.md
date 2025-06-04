@@ -2,7 +2,7 @@
 
 # Update of the Simple Two-way Active Measurement Protocol (STAMP) Class-of-Service Optional Extension - ECN
 
-This is the working area for the individual Internet-Draft, "Update of the Simple Two-way Active Measurement Protocol (STAMP) Class-of-Service Optional Extension - ECN".
+This is the working area for the individual Internet-Draft, "Update of the Simple Two-way Active Measurement Protocol Class-of-Service Extension - ECN".
 
 * [Editor's Copy](https://gwhiteCL.github.io/draft-whimir-ippm-stamp-cos-ecn/#go.draft-whimir-ippm-stamp-cos-ecn.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-whimir-ippm-stamp-cos-ecn)

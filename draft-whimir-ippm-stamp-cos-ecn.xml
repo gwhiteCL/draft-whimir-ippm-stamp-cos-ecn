@@ -43,7 +43,7 @@
 -->
 
   <front>
-    <title abbrev="STAMP CoS ECN Update">Update of the Simple Two-way Active Measurement Protocol (STAMP) Class-of-Service Optional Extension - ECN</title>
+    <title abbrev="STAMP CoS ECN Update">Update of the Simple Two-way Active Measurement Protocol Class-of-Service Extension - ECN</title>
     <!--  [REPLACE/DELETE] abbrev. The abbreviated title is required if the full title is longer than 39 characters -->
 
     <seriesInfo name="Internet-Draft" value="draft-whimir-ippm-stamp-cos-ecn-latest"/>
