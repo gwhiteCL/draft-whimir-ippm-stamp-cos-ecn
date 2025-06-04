@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 
+<!--
      draft-rfcxml-general-template-standard-00
-  
-     This template includes examples of the most commonly used features of RFCXML with comments 
-     explaining how to customise them. This template can be quickly turned into an I-D by editing 
+
+     This template includes examples of the most commonly used features of RFCXML with comments
+     explaining how to customise them. This template can be quickly turned into an I-D by editing
      the examples provided. Look for [REPLACE], [REPLACE/DELETE], [CHECK] and edit accordingly.
      Note - 'DELETE' means delete the element or attribute, not just the contents.
-     
+
      Documentation is at https://authors.ietf.org/en/templates-and-schemas
 -->
 <?xml-model href="rfc7991bis.rnc"?>  <!-- Required for schema validation and schema-aware editing -->
@@ -33,13 +33,13 @@
   submissionType="IETF"
   xml:lang="en"
   version="3">
-<!-- [REPLACE] 
+<!-- [REPLACE]
        * docName with name of your draft
-     [CHECK] 
+     [CHECK]
        * category should be one of std, bcp, info, exp, historic
        * ipr should be one of trust200902, noModificationTrust200902, noDerivativesTrust200902, pre5378Trust200902
        * updates can be an RFC number as NNNN
-       * obsoletes can be an RFC number as NNNN 
+       * obsoletes can be an RFC number as NNNN
 -->
 
   <front>
@@ -72,27 +72,27 @@
       </address>
     </author>
 
-    <author fullname="Greg Mirsky" initials="G" surname="Mirsky">    
+    <author fullname="Greg Mirsky" initials="G" surname="Mirsky">
     <!-- all of the following elements are optional -->
       <organization>Ericsson</organization>
       <address>
-        <email>gregimirsky@gmail.com</email>  
+        <email>gregimirsky@gmail.com</email>
       </address>
     </author>
-   
+
     <date/>
 
     <area>Operations and Management</area>
     <workgroup>IP Performance Measurement</workgroup>
-    <!-- "Internet Engineering Task Force" is fine for individual submissions.  If this element is 
-          not present, the default is "Network Working Group", which is used by the RFC Editor as 
+    <!-- "Internet Engineering Task Force" is fine for individual submissions.  If this element is
+          not present, the default is "Network Working Group", which is used by the RFC Editor as
           a nod to the history of the RFC Series. -->
 
     <keyword>stamp</keyword>
     <keyword>DSCP</keyword>
     <keyword>ECN</keyword>
     <keyword>Congestion</keyword>
-    <!-- [REPLACE/DELETE]. Multiple allowed.  Keywords are incorporated into HTML output files for 
+    <!-- [REPLACE/DELETE]. Multiple allowed.  Keywords are incorporated into HTML output files for
          use by search engines. -->
 
     <abstract>
@@ -101,11 +101,11 @@
    Protocol that enables the upstream monitoring of the Explicit
    Congestion Notification and thus updates RFC 8972.</t>
     </abstract>
- 
+
   </front>
 
   <middle>
-    
+
     <section>
       <name>Introduction</name>
       <t>   <xref target="RFC8972"/> defined several extensions to Simple Two-way Active
@@ -151,11 +151,11 @@
       <!-- [CHECK] The 'Requirements Language' section is optional -->
 
     </section>
-    
+
 
     <section>
       <name>Class of Service TLV</name>
-      <t>The STAMP Session-Sender MAY include a CoS TLV in the STAMP test packet.  
+      <t>The STAMP Session-Sender MAY include a CoS TLV in the STAMP test packet.
         The format of the CoS TLV is presented in <xref target="TLV"/>.</t>
 
 
@@ -191,7 +191,7 @@
       </ul>
 
 
-<t>A STAMP Session-Reflector that receives a test packet with the CoS TLV MUST include the CoS TLV in the reflected test packet. 
+<t>A STAMP Session-Reflector that receives a test packet with the CoS TLV MUST include the CoS TLV in the reflected test packet.
 The Session-Reflector MUST copy the value of the DSCP and ECN
 fields of the IP header of the received STAMP test packet into the
 DSCP2 and EC2 fields, respectively, in the CoS TLV in the reflected test packet.
@@ -200,30 +200,30 @@ DSCP2 and EC2 fields, respectively, in the CoS TLV in the reflected test packet.
 
 <t>
    The Session-Reflector MUST set the ECN value in the IP header of the reflected STAMP test packet to the value of the EC1 field.
-   The Session-Reflector MUST set the RPE 
+   The Session-Reflector MUST set the RPE
    field in the CoS TLV in the reflected test packet to the value 0b01.  As a result, the
    Session-Sender can detect whether the recommended values for DSCP and
    ECN fields in the reflected packets were used by inspecting the value
    of the RPD and RPE fields in the received reflected test packet.
 </t>
 
-    <section> 
-      <name>Interoperability with RFC 8972</name> 
+    <section>
+      <name>Interoperability with RFC 8972</name>
 
-      <t> The extended CoS TLV defined in this draft is backward compatible with 
+      <t> The extended CoS TLV defined in this draft is backward compatible with
       the specification in <xref target="RFC8972" section="4.4"/>.  The handling of the DSCP1, DSCP2, EC2 and RPD fields defined here is identical to the handling defined for the equivalent fields in <xref target="RFC8972" section="4.4"/>.</t>
-   
+
       <t>Consider a case when an implementation that supports this specification performs
       as Session-Sender, and the intended Session-Reflector's support of the CoS TLV
-      is according to <xref target="RFC8972" section="4.4"/>.  
+      is according to <xref target="RFC8972" section="4.4"/>.
       If the operator requires monitoring ECN in the reverse direction, the value
-      of the EC1 field will be set to a non-zero value.  
+      of the EC1 field will be set to a non-zero value.
       Because the Session-Reflector would treat the EC1 field as part of the
       Reserved field, it would ignore its value as per <xref target="RFC8972"
-      section="4.4"/>.  
+      section="4.4"/>.
       Further, the Session-Reflector would treat the RPE field as part of the
       Reserved field and thus it would send the value 0b00 in the reflected STAMP
-      packet, rather than sending the value 0b01.  
+      packet, rather than sending the value 0b01.
       Consequently, the Session-Sender will determine that the ECN value in the
       IP header of the reflected test packet was not set to the
       requested value.</t>
@@ -231,13 +231,13 @@ DSCP2 and EC2 fields, respectively, in the CoS TLV in the reflected test packet.
       <t>Also, this specification supports the case when the Session-Reflector
       supports the extended CoS TLV as defined in this specification and the
       Session-Sender supports the CoS TLV according to <xref target="RFC8972"
-      section="4.4"/>.  
+      section="4.4"/>.
       In that scenario, the Session-Sender will set its <xref target="RFC8972"/>
-      Reserved field to zeros. 
+      Reserved field to zeros.
       The Session-Reflector will interpret the first two bits of that field as
       the EC1 field, as shown in <xref target="TLV"/> and thus will set the
       value of the ECN field in the IP header of the reflected packet to
-      0b00. Further the Session-Reflector will set the RPE field to 0b01. 
+      0b00. Further the Session-Reflector will set the RPE field to 0b01.
       The Session-Sender will treat the RPE field as part of the Reserved field
       and will ignore its value.</t>
 
@@ -250,7 +250,7 @@ DSCP2 and EC2 fields, respectively, in the CoS TLV in the reflected test packet.
       <name>IANA Considerations</name>
       <t>This document includes no request to IANA.</t>
     </section>
-    
+
     <section anchor="Security">
       <!-- All drafts are required to have a security considerations section. See RFC 3552 for a guide. -->
       <name>Security Considerations</name>
@@ -266,7 +266,7 @@ DSCP2 and EC2 fields, respectively, in the CoS TLV in the reflected test packet.
        located in different domains.
       </t>
     </section>
-    
+
     <!-- NOTE: The Acknowledgements and Contributors sections are at the end of this template -->
   </middle>
 
@@ -290,7 +290,7 @@ DSCP2 and EC2 fields, respectively, in the CoS TLV in the reflected test packet.
 
       </references>
     </references>
-    
+
     <section>
       <name>Appendix 1 [REPLACE/DELETE]</name>
       <t>This becomes an Appendix [REPLACE]</t>
@@ -301,11 +301,11 @@ DSCP2 and EC2 fields, respectively, in the CoS TLV in the reflected test packet.
       <name>Acknowledgements</name>
       <t>TBD</t>
     </section>
-    
+
     <section anchor="Contributors" numbered="false">
       <name>Contributors</name>
       <t>Karthik Sundaresan, William Hawkins III, Xiao Min</t>
     </section>
-    
+
  </back>
 </rfc>
