@@ -110,16 +110,17 @@
 
     <section>
       <name>Introduction</name>
-      <t>   <xref target="RFC8972"/> defined several extensions to Simple Two-way Active
-   Measurement Protocol (STAMP).  Among those is Class of Service (CoS)
-   TLV that enables monitoring of the Differential Services Code Point
-   (DSCP) marking in downstream and upstream directions.  Also, CoS TLV
-   supports downstream monitoring of the Explicit Congestion
-   Notification (ECN).  Experience deploying STAMP and its extensions
+      <t>   <xref target="RFC8972"/> defined several extensions to the Simple Two-way Active
+   Measurement Protocol (STAMP).  Among those is a Class of Service (CoS)
+   TLV that enables measurements that utilize the Differentiated Services Code Point
+   (DSCP) marking in both directions.  Also, the CoS TLV
+   supports outbound measurements that utilize the Explicit Congestion
+   Notification (ECN) field, but it lacked support for such measurements on the return path.  
+   Experience deploying STAMP and its extensions
    demonstrated that it is helpful to an operator to monitor ECN's
-   consistency in the upstream direction.  This specification defines
-   the extension of the CoS TLV in a backward compatible manner to
-   support monitoring of ECN in the upstream direction of the STAMP test
+   consistency in both directions.  This specification updates 
+   the definition of the CoS TLV in a backward compatible manner to
+   support monitoring of ECN in the return path of the STAMP test
    session.
       </t>
     </section>
