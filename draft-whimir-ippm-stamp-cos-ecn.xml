@@ -291,11 +291,6 @@ DSCP2 and EC2 fields, respectively, in the CoS TLV in the reflected test packet.
       </references>
     </references>
 
-    <section>
-      <name>Appendix 1 [REPLACE/DELETE]</name>
-      <t>This becomes an Appendix [REPLACE]</t>
-    </section>
-
     <section anchor="Acknowledgements" numbered="false">
       <!-- [REPLACE/DELETE] an Acknowledgements section is optional -->
       <name>Acknowledgements</name>
