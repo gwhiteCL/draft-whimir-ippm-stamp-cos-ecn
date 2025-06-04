@@ -185,8 +185,8 @@
         <li>DSCP2: received value in the DSCP field at the ingress of the Session-Reflector.</li>
         <li>EC2: received value in the ECN field at the ingress of the Session-Reflector.</li>
         <li>RPD (reverse path DSCP): two-bit field indicating whether the Session-Reflector used DSCP1 or DSCP2 as the DSCP value of the reflected test packet; a Session-Sender <bcp14>MUST</bcp14> set the value of the RPD field to 0 on transmission.</li>
-        <li>EC1: EC1 value intended by the Session-Sender to be used as the EC1 value of the reflected test packet.</li>
-        <li>RPE (reverse path EC1): two-bit field indicating whether the Session-Reflector used EC1 as the EC1 value of the reflected test packet; a Session-Sender <bcp14>MUST</bcp14> set the value of the RPE field to 0 on transmission.</li>
+        <li>EC1: ECN value intended by the Session-Sender to be used as the ECN value of the reflected test packet.</li>
+        <li>RPE (reverse path ECN): two-bit field indicating whether the Session-Reflector used EC1 as the ECN value of the reflected test packet; a Session-Sender <bcp14>MUST</bcp14> set the value of the RPE field to 0 on transmission.</li>
         <li>Reserved: twelve-bit field; MUST be zeroed on transmission and ignored on receipt.</li>
       </ul>
 
