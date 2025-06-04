@@ -98,8 +98,9 @@
     <abstract>
       <t>The Simple Two-Way Active Measurement Protocol (STAMP) enables
     one-way and round-trip measurement of network metrics between IP hosts, and has a facility for defining
-    optional extensions. This document updates the definition of the Class of Service TLV (originally defined 
-    in RFC 8972) to enable the measurement of manipulation of the value of the Explicit Congestion Notification (ECN) field of the IP header by middleboxes between two STAMP hosts, and to
+    optional extensions. This document updates the definition of the Class of Service TLV (originally defined
+    in RFC 8972) to enable the measurement of manipulation of the value of the Explicit Congestion
+    Notification (ECN) field of the IP header by middleboxes between two STAMP hosts, and to
     enable discovery and measurement of paths that provide differential treatment of packets depending
     on the value of their ECN field.</t>
     </abstract>
@@ -115,10 +116,10 @@
    TLV that enables measurements that utilize the Differentiated Services Code Point
    (DSCP) marking in both directions.  Also, the CoS TLV
    supports outbound measurements that utilize the Explicit Congestion
-   Notification (ECN) field, but it lacked support for such measurements on the return path.  
+   Notification (ECN) field, but it lacked support for such measurements on the return path.
    Experience deploying STAMP and its extensions
    demonstrated that it is helpful to an operator to monitor ECN's
-   consistency in both directions.  This specification updates 
+   consistency in both directions.  This specification updates
    the definition of the CoS TLV in a backward compatible manner to
    support monitoring of ECN in the return path of the STAMP test
    session.
@@ -200,22 +201,22 @@
       the IP header of the received STAMP test packet into the DSCP2 and EC2
       fields, respectively, in the CoS TLV in the reflected test packet.
       The Session-Reflector MUST use the local policy to verify whether the
-      use of the value of the DSCP1 field is permitted in the domain. 
+      use of the value of the DSCP1 field is permitted in the domain.
       If it is, the Session-Reflector MUST set the DSCP field's value in the
       IP header of the reflected test packet equal to the value of the DSCP1
       field of the received test packet.
       Otherwise, the Session-Reflector MUST use the DSCP value of the received
-      STAMP packet and set the value of the RPD field to 1. 
+      STAMP packet and set the value of the RPD field to 1.
       Upon receiving the reflected packet, if the value of the RPD field is 0,
       the Session-Sender will save the DSCP value for analysis of the CoS in
-      the reverse direction. 
+      the reverse direction.
       If the value of the RP field in the received reflected packet is 1, only
       CoS in the forward direction can be analyzed.</t>
 
       <t>The Session-Reflector MUST set the ECN value in the IP header of the
       reflected STAMP test packet to the value of the EC1 field.
       The Session-Reflector MUST set the RPE field in the CoS TLV in the
-      reflected test packet to the value 0b01.  
+      reflected test packet to the value 0b01.
       As a result, the Session-Sender can detect whether the recommended
       values for DSCP and ECN fields in the reflected packets were used by
       inspecting the value of the RPD and RPE fields in the received
