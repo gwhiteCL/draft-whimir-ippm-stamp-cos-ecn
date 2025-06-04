@@ -159,7 +159,7 @@
 
     <section>
       <name>Class of Service TLV</name>
-      <t>The STAMP Session-Sender MAY include a CoS TLV in the STAMP test packet.
+      <t>The STAMP Session-Sender <bcp14>MAY</bcp14> include a CoS TLV in the STAMP test packet.
         The format of the CoS TLV is presented in <xref target="TLV"/>.</t>
 
 
@@ -183,7 +183,7 @@
       <t>where the fields are defined as follows.</t>
       <ul spacing="normal">
         <li>STAMP TLV Flags: eight-bit field; format presented in <xref target="RFC8972" section="4"/>.</li>
-        <li>CoS (Class of Service) Type: one-octet field; the value MUST be set to 4.</li>
+        <li>CoS (Class of Service) Type: one-octet field; the value <bcp14>MUST</bcp14> be set to 4.</li>
         <li>Length: two-octet field; set equal to the value 4 (octets).</li>
         <li>DSCP1: DSCP value intended by the Session-Sender to be used as the DSCP value of the reflected test packet.</li>
         <li>DSCP2: received value in the DSCP field at the ingress of the Session-Reflector.</li>
@@ -191,21 +191,21 @@
         <li>RPD (reverse path DSCP): two-bit field indicating whether the Session-Reflector used DSCP1 or DSCP2 as the DSCP value of the reflected test packet; a Session-Sender <bcp14>MUST</bcp14> set the value of the RPD field to 0 on transmission.</li>
         <li>EC1: ECN value intended by the Session-Sender to be used as the ECN value of the reflected test packet.</li>
         <li>RPE (reverse path ECN): two-bit field indicating whether the Session-Reflector used EC1 as the ECN value of the reflected test packet; a Session-Sender <bcp14>MUST</bcp14> set the value of the RPE field to 0 on transmission.</li>
-        <li>Reserved: twelve-bit field; MUST be zeroed on transmission and ignored on receipt.</li>
+        <li>Reserved: twelve-bit field; <bcp14>MUST</bcp14> be zeroed on transmission and ignored on receipt.</li>
       </ul>
 
 
       <t>A STAMP Session-Reflector that receives a test packet with the CoS
-      TLV MUST include the CoS TLV in the reflected test packet.
-      The Session-Reflector MUST copy the value of the DSCP and ECN fields of
+      TLV <bcp14>MUST</bcp14> include the CoS TLV in the reflected test packet.
+      The Session-Reflector <bcp14>MUST</bcp14> copy the value of the DSCP and ECN fields of
       the IP header of the received STAMP test packet into the DSCP2 and EC2
       fields, respectively, in the CoS TLV in the reflected test packet.
-      The Session-Reflector MUST use the local policy to verify whether the
+      The Session-Reflector <bcp14>MUST</bcp14> use the local policy to verify whether the
       use of the value of the DSCP1 field is permitted in the domain.
-      If it is, the Session-Reflector MUST set the DSCP field's value in the
+      If it is, the Session-Reflector <bcp14>MUST</bcp14> set the DSCP field's value in the
       IP header of the reflected test packet equal to the value of the DSCP1
       field of the received test packet.
-      Otherwise, the Session-Reflector MUST use the DSCP value of the received
+      Otherwise, the Session-Reflector <bcp14>MUST</bcp14> use the DSCP value of the received
       STAMP packet and set the value of the RPD field to 1.
       Upon receiving the reflected packet, if the value of the RPD field is 0,
       the Session-Sender will save the DSCP value for analysis of the CoS in
@@ -213,9 +213,9 @@
       If the value of the RP field in the received reflected packet is 1, only
       CoS in the forward direction can be analyzed.</t>
 
-      <t>The Session-Reflector MUST set the ECN value in the IP header of the
+      <t>The Session-Reflector <bcp14>MUST</bcp14> set the ECN value in the IP header of the
       reflected STAMP test packet to the value of the EC1 field.
-      The Session-Reflector MUST set the RPE field in the CoS TLV in the
+      The Session-Reflector <bcp14>MUST</bcp14> set the RPE field in the CoS TLV in the
       reflected test packet to the value 0b01.
       As a result, the Session-Sender can detect whether the recommended
       values for DSCP and ECN fields in the reflected packets were used by
