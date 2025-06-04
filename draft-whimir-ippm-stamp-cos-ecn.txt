@@ -64,7 +64,6 @@ Table of Contents
    6.  References
      6.1.  Normative References
      6.2.  Informative References
-   Appendix A.  Appendix 1 [REPLACE/DELETE]
    Acknowledgements
    Contributors
    Authors' Addresses
@@ -277,10 +276,6 @@ Table of Contents
               Low Loss, and Scalable Throughput (L4S)", RFC 9331,
               DOI 10.17487/RFC9331, January 2023,
               <https://www.rfc-editor.org/info/rfc9331>.
-
-Appendix A.  Appendix 1 [REPLACE/DELETE]
-
-   This becomes an Appendix [REPLACE]
 
 Acknowledgements
 
