@@ -4,12 +4,13 @@
 
 WG Working Group                                              Y. N. Here
 Internet-Draft                                    Your Organization Here
-Intended status: Informational                               4 June 2025
+Intended status: Standards Track                             4 June 2025
 Expires: 6 December 2025
 
 
-                           TODO - Your title
-                  draft-todo-yourname-protocol-latest
+Update of the Simple Two-way Active Measurement Protocol (STAMP) Class-
+                  of-Service Optional Extension - ECN
+                 draft-whimir-ippm-stamp-cos-ecn-latest
 
 Abstract
 
@@ -21,8 +22,8 @@ About This Document
 
    The latest revision of this draft can be found at
    https://example.com/LATEST.  Status information for this document may
-   be found at https://datatracker.ietf.org/doc/draft-todo-yourname-
-   protocol/.
+   be found at https://datatracker.ietf.org/doc/draft-whimir-ippm-stamp-
+   cos-ecn/.
 
    Discussion of this document takes place on the WG Working Group
    mailing list (mailto:WG@example.com), which is archived at
