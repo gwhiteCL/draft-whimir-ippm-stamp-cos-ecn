@@ -142,11 +142,11 @@ Table of Contents
       reflected test packet; a Session-Sender MUST set the value of the
       RPD field to 0 on transmission.
 
-   *  EC1: EC1 value intended by the Session-Sender to be used as the
-      EC1 value of the reflected test packet.
+   *  EC1: ECN value intended by the Session-Sender to be used as the
+      ECN value of the reflected test packet.
 
-   *  RPE (reverse path EC1): two-bit field indicating whether the
-      Session-Reflector used EC1 as the EC1 value of the reflected test
+   *  RPE (reverse path ECN): two-bit field indicating whether the
+      Session-Reflector used EC1 as the ECN value of the reflected test
       packet; a Session-Sender MUST set the value of the RPE field to 0
       on transmission.
 

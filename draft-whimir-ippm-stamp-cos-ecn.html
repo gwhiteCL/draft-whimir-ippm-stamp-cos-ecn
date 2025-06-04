@@ -1260,7 +1260,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
       <h2 id="name-class-of-service-tlv">
 <a href="#section-3" class="section-number selfRef">3. </a><a href="#name-class-of-service-tlv" class="section-name selfRef">Class of Service TLV</a>
       </h2>
-<p id="section-3-1">The STAMP Session-Sender MAY include a CoS TLV in the STAMP test packet.  
+<p id="section-3-1">The STAMP Session-Sender MAY include a CoS TLV in the STAMP test packet.
         The format of the CoS TLV is presented in <a href="#TLV" class="auto internal xref">Figure 1</a>.<a href="#section-3-1" class="pilcrow">¶</a></p>
 <span id="name-class-of-service-tlv-2"></span><div id="TLV">
 <figure id="figure-1">
@@ -1299,14 +1299,14 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </li>
         <li class="normal" id="section-3-4.7">RPD (reverse path DSCP): two-bit field indicating whether the Session-Reflector used DSCP1 or DSCP2 as the DSCP value of the reflected test packet; a Session-Sender <span class="bcp14">MUST</span> set the value of the RPD field to 0 on transmission.<a href="#section-3-4.7" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-3-4.8">EC1: EC1 value intended by the Session-Sender to be used as the EC1 value of the reflected test packet.<a href="#section-3-4.8" class="pilcrow">¶</a>
+        <li class="normal" id="section-3-4.8">EC1: ECN value intended by the Session-Sender to be used as the ECN value of the reflected test packet.<a href="#section-3-4.8" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-3-4.9">RPE (reverse path EC1): two-bit field indicating whether the Session-Reflector used EC1 as the EC1 value of the reflected test packet; a Session-Sender <span class="bcp14">MUST</span> set the value of the RPE field to 0 on transmission.<a href="#section-3-4.9" class="pilcrow">¶</a>
+        <li class="normal" id="section-3-4.9">RPE (reverse path ECN): two-bit field indicating whether the Session-Reflector used EC1 as the ECN value of the reflected test packet; a Session-Sender <span class="bcp14">MUST</span> set the value of the RPE field to 0 on transmission.<a href="#section-3-4.9" class="pilcrow">¶</a>
 </li>
         <li class="normal" id="section-3-4.10">Reserved: twelve-bit field; MUST be zeroed on transmission and ignored on receipt.<a href="#section-3-4.10" class="pilcrow">¶</a>
 </li>
       </ul>
-<p id="section-3-5">A STAMP Session-Reflector that receives a test packet with the CoS TLV MUST include the CoS TLV in the reflected test packet. 
+<p id="section-3-5">A STAMP Session-Reflector that receives a test packet with the CoS TLV MUST include the CoS TLV in the reflected test packet.
 The Session-Reflector MUST copy the value of the DSCP and ECN
 fields of the IP header of the received STAMP test packet into the
 DSCP2 and EC2 fields, respectively, in the CoS TLV in the reflected test packet.
@@ -1314,7 +1314,7 @@ DSCP2 and EC2 fields, respectively, in the CoS TLV in the reflected test packet.
   The Session-Reflector MUST use the local policy to verify whether the use of the value of the DSCP1 field is permitted in the domain. If it is, the Session-Reflector MUST set the DSCP field's value in the IP header of the reflected test packet equal to the value of the DSCP1 field of the received test packet. Otherwise, the Session-Reflector MUST use the DSCP value of the received STAMP packet and set the value of the RPD field to 1. Upon receiving the reflected packet, if the value of the RPD field is 0, the Session-Sender will save the DSCP value for analysis of the CoS in the reverse direction. If the value of the RP field in the received reflected packet is 1, only CoS in the forward direction can be analyzed.<a href="#section-3-5" class="pilcrow">¶</a></p>
 <p id="section-3-6">
    The Session-Reflector MUST set the ECN value in the IP header of the reflected STAMP test packet to the value of the EC1 field.
-   The Session-Reflector MUST set the RPE 
+   The Session-Reflector MUST set the RPE
    field in the CoS TLV in the reflected test packet to the value 0b01.  As a result, the
    Session-Sender can detect whether the recommended values for DSCP and
    ECN fields in the reflected packets were used by inspecting the value
@@ -1323,30 +1323,30 @@ DSCP2 and EC2 fields, respectively, in the CoS TLV in the reflected test packet.
         <h3 id="name-interoperability-with-rfc-8">
 <a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-interoperability-with-rfc-8" class="section-name selfRef">Interoperability with RFC 8972</a>
         </h3>
-<p id="section-3.1-1"> The extended CoS TLV defined in this draft is backward compatible with 
+<p id="section-3.1-1"> The extended CoS TLV defined in this draft is backward compatible with
       the specification in <span><a href="https://rfc-editor.org/rfc/rfc8972#section-4.4" class="relref">Section 4.4</a> of [<a href="#RFC8972" class="cite xref">RFC8972</a>]</span>.  The handling of the DSCP1, DSCP2, EC2 and RPD fields defined here is identical to the handling defined for the equivalent fields in <span><a href="https://rfc-editor.org/rfc/rfc8972#section-4.4" class="relref">Section 4.4</a> of [<a href="#RFC8972" class="cite xref">RFC8972</a>]</span>.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
 <p id="section-3.1-2">Consider a case when an implementation that supports this specification performs
       as Session-Sender, and the intended Session-Reflector's support of the CoS TLV
-      is according to <span><a href="https://rfc-editor.org/rfc/rfc8972#section-4.4" class="relref">Section 4.4</a> of [<a href="#RFC8972" class="cite xref">RFC8972</a>]</span>.  
+      is according to <span><a href="https://rfc-editor.org/rfc/rfc8972#section-4.4" class="relref">Section 4.4</a> of [<a href="#RFC8972" class="cite xref">RFC8972</a>]</span>.
       If the operator requires monitoring ECN in the reverse direction, the value
-      of the EC1 field will be set to a non-zero value.  
+      of the EC1 field will be set to a non-zero value.
       Because the Session-Reflector would treat the EC1 field as part of the
-      Reserved field, it would ignore its value as per <span><a href="https://rfc-editor.org/rfc/rfc8972#section-4.4" class="relref">Section 4.4</a> of [<a href="#RFC8972" class="cite xref">RFC8972</a>]</span>.  
+      Reserved field, it would ignore its value as per <span><a href="https://rfc-editor.org/rfc/rfc8972#section-4.4" class="relref">Section 4.4</a> of [<a href="#RFC8972" class="cite xref">RFC8972</a>]</span>.
       Further, the Session-Reflector would treat the RPE field as part of the
       Reserved field and thus it would send the value 0b00 in the reflected STAMP
-      packet, rather than sending the value 0b01.  
+      packet, rather than sending the value 0b01.
       Consequently, the Session-Sender will determine that the ECN value in the
       IP header of the reflected test packet was not set to the
       requested value.<a href="#section-3.1-2" class="pilcrow">¶</a></p>
 <p id="section-3.1-3">Also, this specification supports the case when the Session-Reflector
       supports the extended CoS TLV as defined in this specification and the
-      Session-Sender supports the CoS TLV according to <span><a href="https://rfc-editor.org/rfc/rfc8972#section-4.4" class="relref">Section 4.4</a> of [<a href="#RFC8972" class="cite xref">RFC8972</a>]</span>.  
+      Session-Sender supports the CoS TLV according to <span><a href="https://rfc-editor.org/rfc/rfc8972#section-4.4" class="relref">Section 4.4</a> of [<a href="#RFC8972" class="cite xref">RFC8972</a>]</span>.
       In that scenario, the Session-Sender will set its <span>[<a href="#RFC8972" class="cite xref">RFC8972</a>]</span>
-      Reserved field to zeros. 
+      Reserved field to zeros.
       The Session-Reflector will interpret the first two bits of that field as
       the EC1 field, as shown in <a href="#TLV" class="auto internal xref">Figure 1</a> and thus will set the
       value of the ECN field in the IP header of the reflected packet to
-      0b00. Further the Session-Reflector will set the RPE field to 0b01. 
+      0b00. Further the Session-Reflector will set the RPE field to 0b01.
       The Session-Sender will treat the RPE field as part of the Reserved field
       and will ignore its value.<a href="#section-3.1-3" class="pilcrow">¶</a></p>
 </section>
