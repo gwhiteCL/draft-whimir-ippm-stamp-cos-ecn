@@ -1,6 +1,6 @@
 <!-- regenerate: on (set to off if you edit this file) -->
 
-# Update of the Simple Two-way Active Measurement Protocol (STAMP) Class-of-Service Optional Extension - ECN
+# Update of the Simple Two-way Active Measurement Protocol Class-of-Service Extension - ECN
 
 This is the working area for the individual Internet-Draft, "Update of the Simple Two-way Active Measurement Protocol Class-of-Service Extension - ECN".
 
