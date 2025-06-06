@@ -80,6 +80,15 @@
       </address>
     </author>
 
+    <author fullname="Xiao Min" initials="X" surname="Min">
+    <!-- all of the following elements are optional -->
+      <organization>ZTE</organization>
+      <address>
+        <email>xiao.min2@zte.com.cn/email>
+      </address>
+    </author>
+
+
     <date/>
 
     <area>Operations and Management</area>
