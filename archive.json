@@ -1,0 +1,83 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2025-06-08T01:08:08.873378+00:00",
+  "repo": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOO2MpU86ZFvgD",
+      "title": "Upload initial XML draft and delete the template MD",
+      "url": "https://github.com/gwhiteCL/draft-whimir-ippm-stamp-cos-ecn/pull/1",
+      "state": "MERGED",
+      "author": "gwhiteCL",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-06-04T20:47:10Z",
+      "updatedAt": "2025-06-04T20:49:50Z",
+      "baseRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
+      "baseRefName": "main",
+      "baseRefOid": "75f5a6594ee6805e9b63f9cf115ca94f119f97d9",
+      "headRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
+      "headRefName": "gwhiteCL-use-xml",
+      "headRefOid": "1d4218478ec34677c0d6696375018033e53c2ec3",
+      "closedAt": "2025-06-04T20:49:50Z",
+      "mergedAt": "2025-06-04T20:49:50Z",
+      "mergedBy": "gwhiteCL",
+      "mergeCommit": {
+        "oid": "24c4c51a8af86ca2f95659701356b2ff3626968d"
+      },
+      "comments": [],
+      "reviews": []
+    }
+  ]
+}
