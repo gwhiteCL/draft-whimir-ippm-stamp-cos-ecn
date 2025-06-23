@@ -82,8 +82,14 @@
 
     <author fullname="Xiao Min" initials="X" surname="Min">
     <!-- all of the following elements are optional -->
-      <organization>ZTE</organization>
+      <organization>ZTE Corp.</organization>
       <address>
+        <postal>
+          <!-- Reorder these if your country does things differently -->
+          <city>Nanjing</city>
+          <country>CN</country>
+          <!-- Can use two letter country code -->
+        </postal>
         <email>xiao.min2@zte.com.cn</email>
       </address>
     </author>
@@ -227,8 +233,8 @@
       The Session-Reflector <bcp14>MUST</bcp14> set the RPE field in the CoS TLV in the
       reflected test packet to the value 0b01.
       As a result, the Session-Sender can detect whether the recommended
-      values for DSCP and ECN fields in the reflected packets were used by
-      inspecting the value of the RPD and RPE fields in the received
+      value for ECN field in the reflected packet was used by
+      inspecting the value of the RPE field in the received
       reflected test packet.</t>
 
     <section>
@@ -249,8 +255,7 @@
       Reserved field and thus it would send the value 0b00 in the reflected STAMP
       packet, rather than sending the value 0b01.
       Consequently, the Session-Sender will determine that the ECN value in the
-      IP header of the reflected test packet was not set to the
-      requested value.</t>
+      IP header of the reflected test packet was not set as requested.</t>
 
       <t>Also, this specification supports the case when the Session-Reflector
       supports the extended CoS TLV as defined in this specification and the
@@ -323,7 +328,7 @@
 
     <section anchor="Contributors" numbered="false">
       <name>Contributors</name>
-      <t>Karthik Sundaresan, William Hawkins III, Xiao Min</t>
+      <t>Karthik Sundaresan, William Hawkins III</t>
     </section>
 
  </back>
