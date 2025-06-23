@@ -288,11 +288,12 @@
        and inherits all the security considerations applicable to the base
        STAMP specification <xref target="RFC8762"/> and <xref target="RFC8972"/>.</t>
 
-       <t>As this specification defined the mechanism to test ECN mapping, this
+       <t>As this specification defines a mechanism to set ECN values, this
        document inherits all the security considerations discussed in
-       [RFC2474].  Monitoring and optional control of ECN for a reflected
+       <xref target="RFC3168"/> and <xref target="RFC9330"/>. 
+       Monitoring and optional control of ECN for a reflected
        STAMP test packet using the extended CoS TLV may be used across the
-       Internet so that the Session-Sender and the Session-Reflector are
+       Internet such that the Session-Sender and the Session-Reflector are
        located in different domains.
       </t>
     </section>
