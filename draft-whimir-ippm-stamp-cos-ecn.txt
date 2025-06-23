@@ -6,9 +6,9 @@ IP Performance Measurement                                      G. White
 Internet-Draft                                                 CableLabs
 Updates: 8972 (if approved)                                    G. Mirsky
 Intended status: Standards Track                                Ericsson
-Expires: 8 December 2025                                          X. Min
-                                                                     ZTE
-                                                             6 June 2025
+Expires: 25 December 2025                                         X. Min
+                                                               ZTE Corp.
+                                                            23 June 2025
 
 
    Update of the Simple Two-way Active Measurement Protocol Class-of-
@@ -42,7 +42,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 8 December 2025.
+   This Internet-Draft will expire on 25 December 2025.
 
 Copyright Notice
 
@@ -181,9 +181,9 @@ Table of Contents
    reflected STAMP test packet to the value of the EC1 field.  The
    Session-Reflector MUST set the RPE field in the CoS TLV in the
    reflected test packet to the value 0b01.  As a result, the Session-
-   Sender can detect whether the recommended values for DSCP and ECN
-   fields in the reflected packets were used by inspecting the value of
-   the RPD and RPE fields in the received reflected test packet.
+   Sender can detect whether the recommended value for ECN field in the
+   reflected packet was used by inspecting the value of the RPE field in
+   the received reflected test packet.
 
 3.1.  Interoperability with RFC 8972
 
@@ -205,7 +205,7 @@ Table of Contents
    the value 0b00 in the reflected STAMP packet, rather than sending the
    value 0b01.  Consequently, the Session-Sender will determine that the
    ECN value in the IP header of the reflected test packet was not set
-   to the requested value.
+   as requested.
 
    Also, this specification supports the case when the Session-Reflector
    supports the extended CoS TLV as defined in this specification and
@@ -290,7 +290,7 @@ Acknowledgements
 
 Contributors
 
-   Karthik Sundaresan, William Hawkins III, Xiao Min
+   Karthik Sundaresan, William Hawkins III
 
 Authors' Addresses
 
@@ -309,5 +309,7 @@ Authors' Addresses
 
 
    Xiao Min
-   ZTE
+   ZTE Corp.
+   Nanjing
+   China
    Email: xiao.min2@zte.com.cn
