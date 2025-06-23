@@ -173,7 +173,7 @@ Table of Contents
    packet and set the value of the RPD field to 1.  Upon receiving the
    reflected packet, if the value of the RPD field is 0, the Session-
    Sender will save the DSCP value for analysis of the CoS in the
-   reverse direction.  If the value of the RP field in the received
+   reverse direction.  If the value of the RPD field in the received
    reflected packet is 1, only CoS in the forward direction can be
    analyzed.
 
