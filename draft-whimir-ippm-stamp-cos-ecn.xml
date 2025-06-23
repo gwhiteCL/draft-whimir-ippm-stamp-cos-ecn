@@ -215,7 +215,7 @@
       The Session-Reflector <bcp14>MUST</bcp14> copy the value of the DSCP and ECN fields of
       the IP header of the received STAMP test packet into the DSCP2 and EC2
       fields, respectively, in the CoS TLV in the reflected test packet.</t>
-         
+
       <t>The Session-Reflector <bcp14>MUST</bcp14> use the local policy to verify whether the
       use of the value of the DSCP1 field is permitted in the domain.
       If it is, the Session-Reflector <bcp14>MUST</bcp14> set the DSCP field's value in the
