@@ -225,7 +225,7 @@
       Upon receiving the reflected packet, if the value of the RPD field is 0,
       the Session-Sender will save the DSCP value for analysis of the CoS in
       the reverse direction.
-      If the value of the RP field in the received reflected packet is 1, only
+      If the value of the RPD field in the received reflected packet is 1, only
       CoS in the forward direction can be analyzed.</t>
 
       <t>The Session-Reflector <bcp14>MUST</bcp14> set the ECN value in the IP header of the
