@@ -195,7 +195,7 @@
         </artset>
       </figure>
 
-      <t>where the fields are defined as follows.</t>
+      <t>Where the fields are defined as follows.</t>
       <ul spacing="normal">
         <li>STAMP TLV Flags: eight-bit field; format presented in <xref target="RFC8972" section="4"/>.</li>
         <li>CoS (Class of Service) Type: one-octet field; the value <bcp14>MUST</bcp14> be set to 4.</li>
