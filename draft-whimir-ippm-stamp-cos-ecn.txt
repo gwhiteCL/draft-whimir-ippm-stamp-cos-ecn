@@ -230,12 +230,12 @@ Table of Contents
    and inherits all the security considerations applicable to the base
    STAMP specification [RFC8762] and [RFC8972].
 
-   As this specification defined the mechanism to test ECN mapping, this
+   As this specification defines a mechanism to set ECN values, this
    document inherits all the security considerations discussed in
-   [RFC2474].  Monitoring and optional control of ECN for a reflected
-   STAMP test packet using the extended CoS TLV may be used across the
-   Internet so that the Session-Sender and the Session-Reflector are
-   located in different domains.
+   [RFC3168] and [RFC9330].  Monitoring and optional control of ECN for
+   a reflected STAMP test packet using the extended CoS TLV may be used
+   across the Internet such that the Session-Sender and the Session-
+   Reflector are located in different domains.
 
 6.  References
 
@@ -271,6 +271,12 @@ Table of Contents
               Protocol Optional Extensions", RFC 8972,
               DOI 10.17487/RFC8972, January 2021,
               <https://www.rfc-editor.org/info/rfc8972>.
+
+   [RFC9330]  Briscoe, B., Ed., De Schepper, K., Bagnulo, M., and G.
+              White, "Low Latency, Low Loss, and Scalable Throughput
+              (L4S) Internet Service: Architecture", RFC 9330,
+              DOI 10.17487/RFC9330, January 2023,
+              <https://www.rfc-editor.org/info/rfc9330>.
 
 6.2.  Informative References
 
