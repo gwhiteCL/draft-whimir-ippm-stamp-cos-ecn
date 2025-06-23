@@ -1306,11 +1306,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </li>
         <li class="normal" id="section-3-4.6">EC2: received value in the ECN field at the ingress of the Session-Reflector.<a href="#section-3-4.6" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-3-4.7">RPD (reverse path DSCP): two-bit field indicating whether the Session-Reflector used DSCP1 or DSCP2 as the DSCP value of the reflected test packet; a Session-Sender <span class="bcp14">MUST</span> set the value of the RPD field to 0 on transmission.<a href="#section-3-4.7" class="pilcrow">¶</a>
+        <li class="normal" id="section-3-4.7">RPD (reverse path DSCP): two-bit field indicating whether the Session-Reflector used DSCP1 or DSCP2 as the DSCP value of the reflected test packet; a Session-Sender <span class="bcp14">MUST</span> set the value of the RPD field to 0b00 on transmission.<a href="#section-3-4.7" class="pilcrow">¶</a>
 </li>
         <li class="normal" id="section-3-4.8">EC1: ECN value intended by the Session-Sender to be used as the ECN value of the reflected test packet.<a href="#section-3-4.8" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-3-4.9">RPE (reverse path ECN): two-bit field indicating whether the Session-Reflector used EC1 as the ECN value of the reflected test packet; a Session-Sender <span class="bcp14">MUST</span> set the value of the RPE field to 0 on transmission.<a href="#section-3-4.9" class="pilcrow">¶</a>
+        <li class="normal" id="section-3-4.9">RPE (reverse path ECN): two-bit field indicating whether the Session-Reflector used EC1 as the ECN value of the reflected test packet; a Session-Sender <span class="bcp14">MUST</span> set the value of the RPE field to 0b00 on transmission.<a href="#section-3-4.9" class="pilcrow">¶</a>
 </li>
         <li class="normal" id="section-3-4.10">Reserved: twelve-bit field; <span class="bcp14">MUST</span> be zeroed on transmission and ignored on receipt.<a href="#section-3-4.10" class="pilcrow">¶</a>
 </li>
@@ -1319,27 +1319,27 @@ svg :is([fill="white"], [fill^="#fff"]) {
       TLV <span class="bcp14">MUST</span> include the CoS TLV in the reflected test packet.
       The Session-Reflector <span class="bcp14">MUST</span> copy the value of the DSCP and ECN fields of
       the IP header of the received STAMP test packet into the DSCP2 and EC2
-      fields, respectively, in the CoS TLV in the reflected test packet.
-      The Session-Reflector <span class="bcp14">MUST</span> use the local policy to verify whether the
+      fields, respectively, in the CoS TLV in the reflected test packet.<a href="#section-3-5" class="pilcrow">¶</a></p>
+<p id="section-3-6">The Session-Reflector <span class="bcp14">MUST</span> use the local policy to verify whether the
       use of the value of the DSCP1 field is permitted in the domain.
       If it is, the Session-Reflector <span class="bcp14">MUST</span> set the DSCP field's value in the
       IP header of the reflected test packet equal to the value of the DSCP1
       field of the received test packet.
       Otherwise, the Session-Reflector <span class="bcp14">MUST</span> use the DSCP value of the received
-      STAMP packet and set the value of the RPD field to 1.
-      Upon receiving the reflected packet, if the value of the RPD field is 0,
+      STAMP packet and set the value of the RPD field to 0b01.
+      Upon receiving the reflected packet, if the value of the RPD field is 0b00,
       the Session-Sender will save the DSCP value for analysis of the CoS in
       the reverse direction.
-      If the value of the RPD field in the received reflected packet is 1, only
-      CoS in the forward direction can be analyzed.<a href="#section-3-5" class="pilcrow">¶</a></p>
-<p id="section-3-6">The Session-Reflector <span class="bcp14">MUST</span> set the ECN value in the IP header of the
+      If the value of the RPD field in the received reflected packet is 0b01, only
+      CoS in the forward direction can be analyzed.<a href="#section-3-6" class="pilcrow">¶</a></p>
+<p id="section-3-7">The Session-Reflector <span class="bcp14">MUST</span> set the ECN value in the IP header of the
       reflected STAMP test packet to the value of the EC1 field.
       The Session-Reflector <span class="bcp14">MUST</span> set the RPE field in the CoS TLV in the
       reflected test packet to the value 0b01.
       As a result, the Session-Sender can detect whether the recommended
       value for ECN field in the reflected packet was used by
       inspecting the value of the RPE field in the received
-      reflected test packet.<a href="#section-3-6" class="pilcrow">¶</a></p>
+      reflected test packet.<a href="#section-3-7" class="pilcrow">¶</a></p>
 <section id="section-3.1">
         <h3 id="name-interoperability-with-rfc-8">
 <a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-interoperability-with-rfc-8" class="section-name selfRef">Interoperability with RFC 8972</a>
