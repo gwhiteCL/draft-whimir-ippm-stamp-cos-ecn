@@ -284,9 +284,9 @@
     <section anchor="Security">
       <!-- All drafts are required to have a security considerations section. See RFC 3552 for a guide. -->
       <name>Security Considerations</name>
-      <t>This document extends the functionality of the CoS TLV ([RFC8972])
+      <t>This document extends the functionality of the CoS TLV (<xref target="RFC8972"/>)
        and inherits all the security considerations applicable to the base
-       STAMP specification [RFC8762] and [RFC8972].</t>
+       STAMP specification <xref target="RFC8762"/> and <xref target="RFC8972"/>.</t>
 
        <t>As this specification defined the mechanism to test ECN mapping, this
        document inherits all the security considerations discussed in
