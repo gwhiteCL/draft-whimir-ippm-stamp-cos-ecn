@@ -290,7 +290,7 @@
 
        <t>As this specification defines a mechanism to set ECN values, this
        document inherits all the security considerations discussed in
-       <xref target="RFC3168"/> and <xref target="RFC9330"/>. 
+       <xref target="RFC3168"/> and <xref target="RFC9330"/>.
        Monitoring and optional control of ECN for a reflected
        STAMP test packet using the extended CoS TLV may be used across the
        Internet such that the Session-Sender and the Session-Reflector are
@@ -312,6 +312,8 @@
         <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.8174.xml"/>
         <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.8762.xml"/>
         <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.8972.xml"/>
+        <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9330.xml"/>
+
       </references>
 
       <references>
