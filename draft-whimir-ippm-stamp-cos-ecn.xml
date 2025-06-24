@@ -32,9 +32,9 @@
     <seriesInfo name="Internet-Draft" value="draft-whimir-ippm-stamp-cos-ecn-latest"/>
 
 
-    <author fullname="Greg White" initials="G" surname="White"> 
+    <author fullname="Greg White" initials="G" surname="White">
       <organization>CableLabs</organization>
-      <address> 
+      <address>
         <postal>
           <street>858 Coal Creek Circle</street>
           <city>Louisville</city>
