@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-22T01:08:53.566394+00:00",
+  "timestamp": "2025-06-24T01:03:22.299260+00:00",
   "repo": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
   "labels": [
     {
@@ -84,24 +84,26 @@
       "id": "PR_kwDOO2MpU86aT_Kq",
       "title": "Update draft-whimir-ippm-stamp-cos-ecn.xml",
       "url": "https://github.com/gwhiteCL/draft-whimir-ippm-stamp-cos-ecn/pull/2",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "xiaomin2016",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-06-13T02:37:59Z",
-      "updatedAt": "2025-06-13T02:39:32Z",
+      "updatedAt": "2025-06-23T15:00:14Z",
       "baseRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
       "baseRefName": "main",
       "baseRefOid": "a9f25744eaa9798f72d69fff2a95f205ed23812e",
       "headRepository": "xiaomin2016/draft-whimir-ippm-stamp-cos-ecn",
       "headRefName": "patch-1",
       "headRefOid": "72ca75b2bbdb8be3b8dd2e38c003adb5d2e80bff",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-06-23T15:00:13Z",
+      "mergedAt": "2025-06-23T15:00:13Z",
+      "mergedBy": "gwhiteCL",
+      "mergeCommit": {
+        "oid": "7afe08324b23175274541376deeb55868dfd9985"
+      },
       "comments": [],
       "reviews": []
     }
