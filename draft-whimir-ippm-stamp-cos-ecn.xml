@@ -251,7 +251,7 @@
 
         <t>If a Session-Sender sends multiple STAMP packets with the CoS TLV to a Session-Reflector within an RTT with either the ECT0 or ECT1 value in the ECN field of the IP header, it MUST observe the reflected EC2 field and reduce its sending rate upon observation of a CE value.
         If a Session-Sender sends multiple STAMP packets with the CoS TLV to a Session-Reflector within an RTT with either the ECT0 or ECT1 value in the EC1 field, it MUST observe the ECN value in the IP header of the reflected packets and reduce its sending rate upon observation of a CE value.
-        If a Session-Sender sends a STAMP packet containing both the CoS TLV and the Reflected Test Packet Control TLV (<xref target="I-D.ietf-ippm-asymmetrical-pkts"/>) to a Session-Reflector, and specifies either the ECT0 or ECT1 value in the EC1 field, it MUST observe the IP-ECN value in the reflected packets and adjust the Reflected Test Packet Control parameters in any future STAMP packet sent to the same Session-Reflector based on the observation of CE values.</t>
+        If a Session-Sender sends a STAMP packet containing both the CoS TLV and the Reflected Test Packet Control TLV (<xref target="I-D.ietf-ippm-asymmetrical-pkts"/>) to a Session-Reflector, and specifies either the ECT0 or ECT1 value in the EC1 field, it MUST observe the ECN value in the IP header of the reflected packets and adjust the Reflected Test Packet Control parameters in any future STAMP packet sent to the same Session-Reflector based on the observation of CE values.</t>
 
     </section>
   </section>
