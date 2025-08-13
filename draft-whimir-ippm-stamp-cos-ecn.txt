@@ -260,10 +260,10 @@ Table of Contents
    the CoS TLV and the Reflected Test Packet Control TLV
    ([I-D.ietf-ippm-asymmetrical-pkts]) to a Session-Reflector, and
    specifies either the ECT0 or ECT1 value in the EC1 field, it MUST
-   observe the IP-ECN value in the reflected packets and adjust the
-   Reflected Test Packet Control parameters in any future STAMP packet
-   sent to the same Session-Reflector based on the observation of CE
-   values.
+   observe the ECN value in the IP header of the reflected packets and
+   adjust the Reflected Test Packet Control parameters in any future
+   STAMP packet sent to the same Session-Reflector based on the
+   observation of CE values.
 
 4.  IANA Considerations
 
