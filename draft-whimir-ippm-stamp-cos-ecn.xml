@@ -196,9 +196,12 @@
       CoS in the forward direction can be analyzed.</t>
 
       <t>The Session-Reflector <bcp14>MUST</bcp14> set the ECN value in the IP header of the
-      reflected STAMP test packet to the value of the EC1 field.
-      The Session-Reflector <bcp14>MUST</bcp14> set the RPE field in the CoS TLV in the
+      reflected STAMP test packet to the value of the EC1 field, if possible.
+      The Session-Reflector <bcp14>MUST</bcp14> then set the RPE field in the CoS TLV in the
       reflected test packet to the value 0b01.
+      If the Session-Reflector is unable to set the ECN value in the IP header of the
+      reflected STAMP test packet (perhaps because of platform limitations), it <bcp14>MUST</bcp14> instead set the RPE field in the CoS TLV in the
+      reflected test packet to the value 0b00.
       As a result, the Session-Sender can detect whether the recommended
       value for ECN field in the reflected packet was used by
       inspecting the value of the RPE field in the received
