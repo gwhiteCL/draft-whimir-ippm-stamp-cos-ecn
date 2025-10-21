@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-19T01:05:00.340290+00:00",
+  "timestamp": "2025-10-21T00:59:42.169339+00:00",
   "repo": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
   "labels": [
     {
@@ -104,6 +104,58 @@
       "mergeCommit": {
         "oid": "7afe08324b23175274541376deeb55868dfd9985"
       },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 3,
+      "id": "PR_kwDOO2MpU86uuNaE",
+      "title": "Resolve Will Hawkins' comment:  handle the case where SR can't set IP-ECN",
+      "url": "https://github.com/gwhiteCL/draft-whimir-ippm-stamp-cos-ecn/pull/3",
+      "state": "OPEN",
+      "author": "gwhiteCL",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "https://mailarchive.ietf.org/arch/msg/ippm/EDGFldkfZygdVgRpg2KS1nmwa4o/\r\n",
+      "createdAt": "2025-10-20T22:16:36Z",
+      "updatedAt": "2025-10-20T22:16:36Z",
+      "baseRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
+      "baseRefName": "main",
+      "baseRefOid": "4a38d9e3e5c943292fe2e5d158390e199a182729",
+      "headRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
+      "headRefName": "address-WHawkins-comment",
+      "headRefOid": "a171a6be9259a1f05888d3dac6b8a063319d7f6f",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 4,
+      "id": "PR_kwDOO2MpU86uuOjl",
+      "title": "remove strange usage of \"recommended\"",
+      "url": "https://github.com/gwhiteCL/draft-whimir-ippm-stamp-cos-ecn/pull/4",
+      "state": "OPEN",
+      "author": "gwhiteCL",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-10-20T22:19:08Z",
+      "updatedAt": "2025-10-20T22:19:08Z",
+      "baseRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
+      "baseRefName": "main",
+      "baseRefOid": "4a38d9e3e5c943292fe2e5d158390e199a182729",
+      "headRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
+      "headRefName": "remove-recommended",
+      "headRefOid": "be1d54066d1361d59a3a67199efabd44a10f762e",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
       "comments": [],
       "reviews": []
     }
