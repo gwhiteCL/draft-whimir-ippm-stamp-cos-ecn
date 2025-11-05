@@ -197,11 +197,11 @@
 
       <t>The Session-Reflector <bcp14>MUST</bcp14> set the ECN value in the IP header of the
       reflected STAMP test packet to the value of the EC1 field, if possible.
-      If the Session-Reflector is able to set the ECN value in the IP header of the reflected STAMP 
+      If the Session-Reflector is able to set the ECN value in the IP header of the reflected STAMP
       test packet to the EC1 value, it <bcp14>MUST</bcp14> then set the RPE field in the CoS TLV in the
       reflected test packet to the value 0b11.
       If the Session-Reflector is unable to set the ECN value in the IP header of the
-      reflected STAMP test packet to the EC1 value (perhaps because of platform limitations), 
+      reflected STAMP test packet to the EC1 value (perhaps because of platform limitations),
       it <bcp14>MUST</bcp14> instead set the RPE field in the CoS TLV in the
       reflected test packet to the value 0b10.
       As a result, the Session-Sender can detect whether the recommended
