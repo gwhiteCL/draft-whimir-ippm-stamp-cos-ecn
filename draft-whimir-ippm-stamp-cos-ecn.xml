@@ -197,11 +197,13 @@
 
       <t>The Session-Reflector <bcp14>MUST</bcp14> set the ECN value in the IP header of the
       reflected STAMP test packet to the value of the EC1 field, if possible.
-      The Session-Reflector <bcp14>MUST</bcp14> then set the RPE field in the CoS TLV in the
-      reflected test packet to the value 0b01.
+      If the Session-Reflector is able to set the ECN value in the IP header of the reflected STAMP 
+      test packet to the EC1 value, it <bcp14>MUST</bcp14> then set the RPE field in the CoS TLV in the
+      reflected test packet to the value 0b11.
       If the Session-Reflector is unable to set the ECN value in the IP header of the
-      reflected STAMP test packet (perhaps because of platform limitations), it <bcp14>MUST</bcp14> instead set the RPE field in the CoS TLV in the
-      reflected test packet to the value 0b00.
+      reflected STAMP test packet to the EC1 value (perhaps because of platform limitations), 
+      it <bcp14>MUST</bcp14> instead set the RPE field in the CoS TLV in the
+      reflected test packet to the value 0b10.
       As a result, the Session-Sender can detect whether the recommended
       value for ECN field in the reflected packet was used by
       inspecting the value of the RPE field in the received
@@ -223,8 +225,9 @@
       section="4.4"/>.
       Further, the Session-Reflector would treat the RPE field as part of the
       Reserved field and thus it would send the value 0b00 in the reflected STAMP
-      packet, rather than sending the value 0b01.
-      Consequently, the Session-Sender will determine that the ECN value in the
+      packet, rather than sending the value 0b10 or 0b11.
+      Consequently, the Session-Sender will determine that the Session-Reflector
+      does not implement the current version of the CoS TLV, and that the ECN value in the
       IP header of the reflected test packet was not set as requested.</t>
 
       <t>Also, this specification supports the case when the Session-Reflector
@@ -236,7 +239,7 @@
       The Session-Reflector will interpret the first two bits of that field as
       the EC1 field, as shown in <xref target="TLV"/> and thus will set the
       value of the ECN field in the IP header of the reflected packet to
-      0b00. Further the Session-Reflector will set the RPE field to 0b01.
+      0b00. Further the Session-Reflector will set the RPE field to 0b11.
       The Session-Sender will treat the RPE field as part of the Reserved field
       and will ignore its value.</t>
 
