@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-11-04T01:00:27.339637+00:00",
+  "timestamp": "2025-11-06T01:01:10.029570+00:00",
   "repo": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
   "labels": [
     {
@@ -49,7 +49,40 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "number": 5,
+      "id": "I_kwDOO2MpU87WIZHk",
+      "title": "Discuss the existence of the STAMP Extensions for Reflecting STAMP Packet IP Headers",
+      "url": "https://github.com/gwhiteCL/draft-whimir-ippm-stamp-cos-ecn/issues/5",
+      "state": "OPEN",
+      "author": "gwhiteCL",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "@rakgandhi commented at IETF124:\n[draft-ietf-ippm-stamp-ext-hdr](https://datatracker.ietf.org/doc/draft-ietf-ippm-stamp-ext-hdr/) is a way for an SR to reflect the entire received IP header (including DSCP and ECN). We should mention this in the cos-ecn draft so that readers aren't confused about the difference between the two.\n\n\n",
+      "createdAt": "2025-11-05T19:38:29Z",
+      "updatedAt": "2025-11-05T19:47:22Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 6,
+      "id": "I_kwDOO2MpU87WIdcO",
+      "title": "Discuss alternative options to set DSCP and ECN at the SR",
+      "url": "https://github.com/gwhiteCL/draft-whimir-ippm-stamp-cos-ecn/issues/6",
+      "state": "OPEN",
+      "author": "gwhiteCL",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "@rakgandhi commented at IETF124 IPPM:  Mention different mechanisms that can be used to set DSCP and ECN:  there could be a default policy regarding what DSCP&ECN value(s) can be used on the SR machine. There could also be a Global policy configured for the SR itself. There could be a stateful policy regarding allowed values that can be used on a session-by-session basis.   From the perspective of the draft, the handling of these cases should be clear:  The RPD and RPE fields MUST accurately reflect whether the SR complied with the DSCP1 and EC1 instructions.",
+      "createdAt": "2025-11-05T19:44:24Z",
+      "updatedAt": "2025-11-05T21:54:46Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
   "pulls": [
     {
       "number": 1,
@@ -119,18 +152,26 @@
       "labels": [],
       "body": "https://mailarchive.ietf.org/arch/msg/ippm/EDGFldkfZygdVgRpg2KS1nmwa4o/\r\n",
       "createdAt": "2025-10-20T22:16:36Z",
-      "updatedAt": "2025-10-20T22:16:36Z",
+      "updatedAt": "2025-11-05T21:36:59Z",
       "baseRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
       "baseRefName": "main",
       "baseRefOid": "4a38d9e3e5c943292fe2e5d158390e199a182729",
       "headRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
       "headRefName": "address-WHawkins-comment",
-      "headRefOid": "a171a6be9259a1f05888d3dac6b8a063319d7f6f",
+      "headRefOid": "7d8790741dfc9f9004adf8585817b7755e573d2a",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "gwhiteCL",
+          "authorAssociation": "OWNER",
+          "body": "Per discussion on the mailing list and at IETF124, the plan is to adopt \"option3\":\r\n\r\n>  A \u201cnew\u201d SR would always set RPE = 0b1x.  If it has set IP-ECN=EC1 then it sends RPE=0b11.  If it is unable to set IP-ECN=EC1 then it sends RPE=0b10.  Thus the upper bit indicates \u201cI\u2019m a new SR\u201d and the lower bit indicates \u201cI\u2019ve set IP-ECN as you asked\u201d, and there are no ambiguities.  \r\n\r\nThis PR needs to be updated to align with that solution.",
+          "createdAt": "2025-11-05T19:34:43Z",
+          "updatedAt": "2025-11-05T19:34:43Z"
+        }
+      ],
       "reviews": []
     },
     {
