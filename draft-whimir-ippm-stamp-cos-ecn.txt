@@ -6,9 +6,9 @@ IP Performance Measurement                                      G. White
 Internet-Draft                                                 CableLabs
 Updates: 8972 (if approved)                                    G. Mirsky
 Intended status: Standards Track                                Ericsson
-Expires: 14 February 2026                                         X. Min
+Expires: 11 May 2026                                              X. Min
                                                                ZTE Corp.
-                                                          13 August 2025
+                                                         7 November 2025
 
 
    Update of the Simple Two-way Active Measurement Protocol Class-of-
@@ -42,7 +42,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 14 February 2026.
+   This Internet-Draft will expire on 11 May 2026.
 
 Copyright Notice
 
@@ -183,9 +183,8 @@ Table of Contents
    reflected STAMP test packet to the value of the EC1 field.  The
    Session-Reflector MUST set the RPE field in the CoS TLV in the
    reflected test packet to the value 0b01.  As a result, the Session-
-   Sender can detect whether the recommended value for ECN field in the
-   reflected packet was used by inspecting the value of the RPE field in
-   the received reflected test packet.
+   Sender can detect whether the EC1 value was used by inspecting the
+   value of the RPE field in the received reflected test packet.
 
 3.1.  Interoperability with RFC 8972
 

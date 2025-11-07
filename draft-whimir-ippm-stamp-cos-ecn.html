@@ -17,26 +17,25 @@
     enable discovery and measurement of paths that provide differential treatment of packets depending
     on the value of their ECN field. 
     " name="description">
-<meta content="xml2rfc 3.30.0" name="generator">
+<meta content="xml2rfc 3.31.0" name="generator">
 <meta content="stamp" name="keyword">
 <meta content="DSCP" name="keyword">
 <meta content="ECN" name="keyword">
 <meta content="Congestion" name="keyword">
 <meta content="draft-whimir-ippm-stamp-cos-ecn-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.30.0
-    Python 3.12.11
+  xml2rfc 3.31.0
+    Python 3.12.12
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
     intervaltree 3.1.0
     Jinja2 3.1.6
     lxml 5.3.1
-    platformdirs 4.3.8
+    platformdirs 4.5.0
     pycountry 24.6.1
     PyYAML 6.0.2
-    requests 2.32.4
-    setuptools 80.9.0
-    wcwidth 0.2.13
+    requests 2.32.5
+    wcwidth 0.2.14
 -->
 <link href="draft-whimir-ippm-stamp-cos-ecn.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -1055,11 +1054,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">STAMP CoS ECN Update</td>
-<td class="right">August 2025</td>
+<td class="right">November 2025</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">White, et al.</td>
-<td class="center">Expires 14 February 2026</td>
+<td class="center">Expires 11 May 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1075,12 +1074,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc8972" class="eref">8972</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-08-13" class="published">13 August 2025</time>
+<time datetime="2025-11-07" class="published">7 November 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-02-14">14 February 2026</time></dd>
+<dd class="expires"><time datetime="2026-05-11">11 May 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1128,7 +1127,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 14 February 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 11 May 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1339,8 +1338,8 @@ svg :is([fill="white"], [fill^="#fff"]) {
       reflected STAMP test packet to the value of the EC1 field.
       The Session-Reflector <span class="bcp14">MUST</span> set the RPE field in the CoS TLV in the
       reflected test packet to the value 0b01.
-      As a result, the Session-Sender can detect whether the recommended
-      value for ECN field in the reflected packet was used by
+      As a result, the Session-Sender can detect whether the EC1
+      value was used by
       inspecting the value of the RPE field in the received
       reflected test packet.<a href="#section-3-7" class="pilcrow">¶</a></p>
 <section id="section-3.1">
