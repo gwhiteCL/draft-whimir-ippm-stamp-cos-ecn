@@ -180,11 +180,17 @@ Table of Contents
    packet is 0b01, only CoS in the forward direction can be analyzed.
 
    The Session-Reflector MUST set the ECN value in the IP header of the
-   reflected STAMP test packet to the value of the EC1 field.  The
-   Session-Reflector MUST set the RPE field in the CoS TLV in the
-   reflected test packet to the value 0b01.  As a result, the Session-
-   Sender can detect whether the EC1 value was used by inspecting the
-   value of the RPE field in the received reflected test packet.
+   reflected STAMP test packet to the value of the EC1 field, if
+   possible.  If the Session-Reflector is able to set the ECN value in
+   the IP header of the reflected STAMP test packet to the EC1 value, it
+   MUST then set the RPE field in the CoS TLV in the reflected test
+   packet to the value 0b11.  If the Session-Reflector is unable to set
+   the ECN value in the IP header of the reflected STAMP test packet to
+   the EC1 value (perhaps because of platform limitations), it MUST
+   instead set the RPE field in the CoS TLV in the reflected test packet
+   to the value 0b10.  As a result, the Session-Sender can detect
+   whether the EC1 value was used by inspecting the value of the RPE
+   field in the received reflected test packet.
 
 3.1.  Interoperability with RFC 8972
 
@@ -204,9 +210,10 @@ Table of Contents
    Section 4.4 of [RFC8972].  Further, the Session-Reflector would treat
    the RPE field as part of the Reserved field and thus it would send
    the value 0b00 in the reflected STAMP packet, rather than sending the
-   value 0b01.  Consequently, the Session-Sender will determine that the
-   ECN value in the IP header of the reflected test packet was not set
-   as requested.
+   value 0b10 or 0b11.  Consequently, the Session-Sender will determine
+   that the Session-Reflector does not implement the current version of
+   the CoS TLV, and that the ECN value in the IP header of the reflected
+   test packet was not set as requested.
 
    Also, this specification supports the case when the Session-Reflector
    supports the extended CoS TLV as defined in this specification and
@@ -216,7 +223,7 @@ Table of Contents
    interpret the first two bits of that field as the EC1 field, as shown
    in Figure 1 and thus will set the value of the ECN field in the IP
    header of the reflected packet to 0b00.  Further the Session-
-   Reflector will set the RPE field to 0b01.  The Session-Sender will
+   Reflector will set the RPE field to 0b11.  The Session-Sender will
    treat the RPE field as part of the Reserved field and will ignore its
    value.
 
