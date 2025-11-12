@@ -182,8 +182,12 @@
       the IP header of the received STAMP test packet into the DSCP2 and EC2
       fields, respectively, in the CoS TLV in the reflected test packet.</t>
 
-      <t>The Session-Reflector <bcp14>MUST</bcp14> use the local policy to verify whether the
-      use of the value of the DSCP1 field is permitted in the domain.
+      <t>A Session-Reflector might have a local policy configuration that limits the DSCP values
+        that it can use for reflected test packets.
+        This local policy could be (for example) a system default policy, a global policy for the Session-Reflector, or
+        a policy that is configured for specific destination addresses or networks.
+        The Session-Reflector <bcp14>MUST</bcp14> verify whether the
+      use of the value of the DSCP1 field is permitted in the reflected test packet.
       If it is, the Session-Reflector <bcp14>MUST</bcp14> set the DSCP field's value in the
       IP header of the reflected test packet equal to the value of the DSCP1
       field of the received test packet.
@@ -195,13 +199,19 @@
       If the value of the RPD field in the received reflected packet is 0b01, only
       CoS in the forward direction can be analyzed.</t>
 
-      <t>The Session-Reflector <bcp14>MUST</bcp14> set the ECN value in the IP header of the
-      reflected STAMP test packet to the value of the EC1 field, if possible.
+      <t>A Session-Reflector might have a local policy configuration that limits the ECN values
+        that it can use for reflected test packets.
+        This local policy could be (for example) a system default policy, a global policy for the Session-Reflector, or
+        a policy that is configured for specific destination addresses or networks.
+        Additionally, a Session-Reflector could have platform limitations that
+        prevent it from setting the ECN value in reflected test packets.
+        The Session-Reflector <bcp14>MUST</bcp14> set the ECN value in the IP header of the
+      reflected STAMP test packet to the value of the EC1 field, if it is permitted and capable to do so.
       If the Session-Reflector is able to set the ECN value in the IP header of the reflected STAMP
       test packet to the EC1 value, it <bcp14>MUST</bcp14> then set the RPE field in the CoS TLV in the
       reflected test packet to the value 0b11.
       If the Session-Reflector is unable to set the ECN value in the IP header of the
-      reflected STAMP test packet to the EC1 value (perhaps because of platform limitations),
+      reflected STAMP test packet to the EC1 value,
       it <bcp14>MUST</bcp14> instead set the RPE field in the CoS TLV in the
       reflected test packet to the value 0b10.
       As a result, the Session-Sender can detect whether the EC1
