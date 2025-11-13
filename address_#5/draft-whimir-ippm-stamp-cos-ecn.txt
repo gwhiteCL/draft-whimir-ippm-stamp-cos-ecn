@@ -6,9 +6,9 @@ IP Performance Measurement                                      G. White
 Internet-Draft                                                 CableLabs
 Updates: 8972 (if approved)                                    G. Mirsky
 Intended status: Standards Track                                Ericsson
-Expires: 16 May 2026                                              X. Min
+Expires: 17 May 2026                                              X. Min
                                                                ZTE Corp.
-                                                        12 November 2025
+                                                        13 November 2025
 
 
    Update of the Simple Two-way Active Measurement Protocol Class-of-
@@ -42,7 +42,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 16 May 2026.
+   This Internet-Draft will expire on 17 May 2026.
 
 Copyright Notice
 
@@ -94,9 +94,9 @@ Table of Contents
    a mechanism that can be used by a Session-Sender to request that the
    Session-Reflector copy the entire IP header from the received test
    packet into the reflected test packet.  That capability could be used
-   in place of the CoS TLV to observe the forward path DSCP and ECN
-   values in situations where there is no need to control the return
-   path DSCP or ECN value.
+   in place of the CoS TLV to observe the DSCP and ECN values in the
+   forward direction in situations where there is no need to control the
+   return path DSCP or ECN value.
 
 2.  Conventions Used in This Document
 
