@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-11-09T01:04:00.643786+00:00",
+  "timestamp": "2025-11-13T01:01:45.310986+00:00",
   "repo": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
   "labels": [
     {
@@ -96,7 +96,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-06-04T20:47:10Z",
-      "updatedAt": "2025-06-04T20:49:50Z",
+      "updatedAt": "2025-11-12T03:47:35Z",
       "baseRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
       "baseRefName": "main",
       "baseRefOid": "75f5a6594ee6805e9b63f9cf115ca94f119f97d9",
@@ -152,7 +152,7 @@
       "labels": [],
       "body": "https://mailarchive.ietf.org/arch/msg/ippm/EDGFldkfZygdVgRpg2KS1nmwa4o/\r\n",
       "createdAt": "2025-10-20T22:16:36Z",
-      "updatedAt": "2025-11-07T19:52:09Z",
+      "updatedAt": "2025-11-12T03:47:01Z",
       "baseRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
       "baseRefName": "main",
       "baseRefOid": "452d4540da2f53d32fc6628dc7b17cded091d9ca",
@@ -188,7 +188,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-10-20T22:19:08Z",
-      "updatedAt": "2025-11-07T19:49:42Z",
+      "updatedAt": "2025-11-12T03:46:46Z",
       "baseRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
       "baseRefName": "main",
       "baseRefOid": "4a38d9e3e5c943292fe2e5d158390e199a182729",
@@ -203,6 +203,86 @@
       },
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 7,
+      "id": "PR_kwDOO2MpU86y4_I0",
+      "title": "Add mention of ietf-ippm-stamp-ext-hdr",
+      "url": "https://github.com/gwhiteCL/draft-whimir-ippm-stamp-cos-ecn/pull/7",
+      "state": "OPEN",
+      "author": "gwhiteCL",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Proposal to address #5 ",
+      "createdAt": "2025-11-12T04:17:37Z",
+      "updatedAt": "2025-11-12T18:43:22Z",
+      "baseRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
+      "baseRefName": "main",
+      "baseRefOid": "49404803b1e5e20b7ff9a5a73546616153412f40",
+      "headRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
+      "headRefName": "address_#5",
+      "headRefOid": "39f39fc5509dbeac545a1bd5c10eeee9aff18ceb",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOO2MpU87N7hzD",
+          "commit": {
+            "abbreviatedOid": "39f39fc"
+          },
+          "author": "rakgandhi",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-11-12T18:43:22Z",
+          "updatedAt": "2025-11-12T18:43:22Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "id": "PR_kwDOO2MpU86y5K2n",
+      "title": "draft text to address #6",
+      "url": "https://github.com/gwhiteCL/draft-whimir-ippm-stamp-cos-ecn/pull/8",
+      "state": "OPEN",
+      "author": "gwhiteCL",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "fixes #6 ",
+      "createdAt": "2025-11-12T04:46:18Z",
+      "updatedAt": "2025-11-12T18:48:09Z",
+      "baseRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
+      "baseRefName": "main",
+      "baseRefOid": "49404803b1e5e20b7ff9a5a73546616153412f40",
+      "headRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
+      "headRefName": "address_#6",
+      "headRefOid": "6c659cc9b3d2f9afc64369841618b5b3154cd3a9",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOO2MpU87N7lV3",
+          "commit": {
+            "abbreviatedOid": "6c659cc"
+          },
+          "author": "rakgandhi",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-11-12T18:48:09Z",
+          "updatedAt": "2025-11-12T18:48:09Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
