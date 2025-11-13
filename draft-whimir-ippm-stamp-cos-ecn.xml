@@ -109,10 +109,9 @@
       <t>Another STAMP extension header <xref target="I-D.ietf-ippm-stamp-ext-hdr"/> defines a mechanism that can
       be used by a Session-Sender to request that the Session-Reflector copy the entire IP header from the received test
       packet into the reflected test packet.
-      That capability could be used in place of the CoS TLV to observe the forward path DSCP and ECN values in situations
+      That capability could be used in place of the CoS TLV to observe the DSCP and ECN values in the forward direction in situations
       where there is no need to control the return path DSCP or ECN value. </t>
     </section>
-
 
     <section>
       <name>Conventions Used in This Document</name>
