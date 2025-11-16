@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-11-13T01:01:45.310986+00:00",
+  "timestamp": "2025-11-16T01:05:47.506898+00:00",
   "repo": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
   "labels": [
     {
@@ -214,15 +214,15 @@
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
-      "body": "Proposal to address #5 ",
+      "body": "fixes #5 ",
       "createdAt": "2025-11-12T04:17:37Z",
-      "updatedAt": "2025-11-12T18:43:22Z",
+      "updatedAt": "2025-11-13T09:36:09Z",
       "baseRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
       "baseRefName": "main",
       "baseRefOid": "49404803b1e5e20b7ff9a5a73546616153412f40",
       "headRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
       "headRefName": "address_#5",
-      "headRefOid": "39f39fc5509dbeac545a1bd5c10eeee9aff18ceb",
+      "headRefOid": "98b814a007f5f1976123e450d6aa945b1870d3ad",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
