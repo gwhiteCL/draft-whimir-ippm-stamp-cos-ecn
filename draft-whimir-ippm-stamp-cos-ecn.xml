@@ -144,6 +144,9 @@
 
     <section>
       <name>Class of Service TLV</name>
+
+      <section>
+        <name>TLV Definition</name>
       <t>The STAMP Session-Sender <bcp14>MAY</bcp14> include a CoS TLV in the STAMP test packet.
         The format of the CoS TLV is presented in <xref target="TLV"/>.</t>
 
@@ -179,7 +182,10 @@
         <li>Reserved: twelve-bit field; <bcp14>MUST</bcp14> be zeroed on transmission and ignored on receipt.</li>
       </ul>
 
+    </section>
 
+    <section>
+      <name>Session-Reflector Behavior</name>
       <t>A STAMP Session-Reflector that receives a test packet with the CoS
       TLV <bcp14>MUST</bcp14> include the CoS TLV in the reflected test packet.
       The Session-Reflector <bcp14>MUST</bcp14> copy the value of the DSCP and ECN fields of
@@ -222,6 +228,8 @@
       value was used by
       inspecting the value of the RPE field in the received
       reflected test packet.</t>
+
+    </section>
 
     <section>
       <name>Interoperability with RFC 8972</name>
