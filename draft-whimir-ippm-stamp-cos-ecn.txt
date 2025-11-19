@@ -175,30 +175,42 @@ Table of Contents
    EC2 fields, respectively, in the CoS TLV in the reflected test
    packet.
 
-   The Session-Reflector MUST use the local policy to verify whether the
-   use of the value of the DSCP1 field is permitted in the domain.  If
-   it is, the Session-Reflector MUST set the DSCP field's value in the
-   IP header of the reflected test packet equal to the value of the
-   DSCP1 field of the received test packet.  Otherwise, the Session-
-   Reflector MUST use the DSCP value of the received STAMP packet and
-   set the value of the RPD field to 0b01.  Upon receiving the reflected
-   packet, if the value of the RPD field is 0b00, the Session-Sender
-   will save the DSCP value for analysis of the CoS in the reverse
-   direction.  If the value of the RPD field in the received reflected
-   packet is 0b01, only CoS in the forward direction can be analyzed.
+   A Session-Reflector might have a local policy configuration that
+   limits the DSCP values that it can use for reflected test packets.
+   This local policy could be (for example) a system default policy, a
+   global policy for the Session-Reflector, or a policy that is
+   configured for specific destination addresses or networks.  The
+   Session-Reflector MUST verify whether the use of the value of the
+   DSCP1 field is permitted in the reflected test packet.  If it is, the
+   Session-Reflector MUST set the DSCP field's value in the IP header of
+   the reflected test packet equal to the value of the DSCP1 field of
+   the received test packet.  Otherwise, the Session-Reflector MUST use
+   the DSCP value of the received STAMP packet and set the value of the
+   RPD field to 0b01.  Upon receiving the reflected packet, if the value
+   of the RPD field is 0b00, the Session-Sender will save the DSCP value
+   for analysis of the CoS in the reverse direction.  If the value of
+   the RPD field in the received reflected packet is 0b01, only CoS in
+   the forward direction can be analyzed.
 
+   A Session-Reflector might have a local policy configuration that
+   limits the ECN values that it can use for reflected test packets.
+   This local policy could be (for example) a system default policy, a
+   global policy for the Session-Reflector, or a policy that is
+   configured for specific destination addresses or networks.
+   Additionally, a Session-Reflector could have platform limitations
+   that prevent it from setting the ECN value in reflected test packets.
    The Session-Reflector MUST set the ECN value in the IP header of the
-   reflected STAMP test packet to the value of the EC1 field, if
-   possible.  If the Session-Reflector is able to set the ECN value in
-   the IP header of the reflected STAMP test packet to the EC1 value, it
-   MUST then set the RPE field in the CoS TLV in the reflected test
-   packet to the value 0b11.  If the Session-Reflector is unable to set
-   the ECN value in the IP header of the reflected STAMP test packet to
-   the EC1 value (perhaps because of platform limitations), it MUST
-   instead set the RPE field in the CoS TLV in the reflected test packet
-   to the value 0b10.  As a result, the Session-Sender can detect
-   whether the EC1 value was used by inspecting the value of the RPE
-   field in the received reflected test packet.
+   reflected STAMP test packet to the value of the EC1 field, if it is
+   permitted and capable to do so.  If the Session-Reflector is able to
+   set the ECN value in the IP header of the reflected STAMP test packet
+   to the EC1 value, it MUST then set the RPE field in the CoS TLV in
+   the reflected test packet to the value 0b11.  If the Session-
+   Reflector is unable to set the ECN value in the IP header of the
+   reflected STAMP test packet to the EC1 value, it MUST instead set the
+   RPE field in the CoS TLV in the reflected test packet to the value
+   0b10.  As a result, the Session-Sender can detect whether the EC1
+   value was used by inspecting the value of the RPE field in the
+   received reflected test packet.
 
 3.1.  Interoperability with RFC 8972
 
