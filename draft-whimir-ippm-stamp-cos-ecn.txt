@@ -6,9 +6,9 @@ IP Performance Measurement                                      G. White
 Internet-Draft                                                 CableLabs
 Updates: 8972 (if approved)                                    G. Mirsky
 Intended status: Standards Track                                Ericsson
-Expires: 11 May 2026                                              X. Min
+Expires: 23 May 2026                                              X. Min
                                                                ZTE Corp.
-                                                         7 November 2025
+                                                        19 November 2025
 
 
    Update of the Simple Two-way Active Measurement Protocol Class-of-
@@ -42,7 +42,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 11 May 2026.
+   This Internet-Draft will expire on 23 May 2026.
 
 Copyright Notice
 
@@ -89,6 +89,14 @@ Table of Contents
    ECN's consistency in both directions.  This specification updates the
    definition of the CoS TLV in a backward compatible manner to support
    monitoring of ECN in the return path of the STAMP test session.
+
+   Another STAMP extension header [I-D.ietf-ippm-stamp-ext-hdr] defines
+   a mechanism that can be used by a Session-Sender to request that the
+   Session-Reflector copy the entire IP header from the received test
+   packet into the reflected test packet.  That capability could be used
+   in place of the CoS TLV to observe the DSCP and ECN values in the
+   forward direction in situations where there is no need to control the
+   return path DSCP or ECN value.
 
 2.  Conventions Used in This Document
 
@@ -349,6 +357,14 @@ Table of Contents
               Low Loss, and Scalable Throughput (L4S)", RFC 9331,
               DOI 10.17487/RFC9331, January 2023,
               <https://www.rfc-editor.org/info/rfc9331>.
+
+   [I-D.ietf-ippm-stamp-ext-hdr]
+              Gandhi, R., Zhou, T., Li, Z., and W. Hawkins, "Simple Two-
+              Way Active Measurement Protocol (STAMP) Extensions for
+              Reflecting STAMP Packet IP Headers", Work in Progress,
+              Internet-Draft, draft-ietf-ippm-stamp-ext-hdr-07, 6
+              November 2025, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-ippm-stamp-ext-hdr-07>.
 
 Acknowledgements
 
