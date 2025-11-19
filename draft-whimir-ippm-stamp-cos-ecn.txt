@@ -65,8 +65,10 @@ Table of Contents
      2.1.  Acronyms
      2.2.  Requirements Language
    3.  Class of Service TLV
-     3.1.  Interoperability with RFC 8972
-     3.2.  Congestion Response
+     3.1.  TLV Definition
+     3.2.  Session-Reflector Behavior
+     3.3.  Interoperability with RFC 8972
+     3.4.  Congestion Response
    4.  IANA Considerations
    5.  Security Considerations
    6.  References
@@ -120,6 +122,8 @@ Table of Contents
 
 3.  Class of Service TLV
 
+3.1.  TLV Definition
+
    The STAMP Session-Sender MAY include a CoS TLV in the STAMP test
    packet.  The format of the CoS TLV is presented in Figure 1.
 
@@ -168,6 +172,8 @@ Table of Contents
    *  Reserved: twelve-bit field; MUST be zeroed on transmission and
       ignored on receipt.
 
+3.2.  Session-Reflector Behavior
+
    A STAMP Session-Reflector that receives a test packet with the CoS
    TLV MUST include the CoS TLV in the reflected test packet.  The
    Session-Reflector MUST copy the value of the DSCP and ECN fields of
@@ -212,7 +218,7 @@ Table of Contents
    value was used by inspecting the value of the RPE field in the
    received reflected test packet.
 
-3.1.  Interoperability with RFC 8972
+3.3.  Interoperability with RFC 8972
 
    The extended CoS TLV defined in this draft is backward compatible
    with the specification in Section 4.4 of [RFC8972].  The handling of
@@ -247,7 +253,7 @@ Table of Contents
    treat the RPE field as part of the Reserved field and will ignore its
    value.
 
-3.2.  Congestion Response
+3.4.  Congestion Response
 
    [RFC3168] and [RFC9330] mandate that applications that send packets
    marked with the ECT0 or ECT1 codepoints implement a response to
