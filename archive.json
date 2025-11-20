@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-11-16T01:05:47.506898+00:00",
+  "timestamp": "2025-11-20T01:00:01.120100+00:00",
   "repo": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
   "labels": [
     {
@@ -55,15 +55,15 @@
       "id": "I_kwDOO2MpU87WIZHk",
       "title": "Discuss the existence of the STAMP Extensions for Reflecting STAMP Packet IP Headers",
       "url": "https://github.com/gwhiteCL/draft-whimir-ippm-stamp-cos-ecn/issues/5",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "gwhiteCL",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "@rakgandhi commented at IETF124:\n[draft-ietf-ippm-stamp-ext-hdr](https://datatracker.ietf.org/doc/draft-ietf-ippm-stamp-ext-hdr/) is a way for an SR to reflect the entire received IP header (including DSCP and ECN). We should mention this in the cos-ecn draft so that readers aren't confused about the difference between the two.\n\n\n",
       "createdAt": "2025-11-05T19:38:29Z",
-      "updatedAt": "2025-11-05T19:47:22Z",
-      "closedAt": null,
+      "updatedAt": "2025-11-19T21:49:17Z",
+      "closedAt": "2025-11-19T21:49:17Z",
       "comments": []
     },
     {
@@ -71,15 +71,15 @@
       "id": "I_kwDOO2MpU87WIdcO",
       "title": "Discuss alternative options to set DSCP and ECN at the SR",
       "url": "https://github.com/gwhiteCL/draft-whimir-ippm-stamp-cos-ecn/issues/6",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "gwhiteCL",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "@rakgandhi commented at IETF124 IPPM:  Mention different mechanisms that can be used to set DSCP and ECN:  there could be a default policy regarding what DSCP&ECN value(s) can be used on the SR machine. There could also be a Global policy configured for the SR itself. There could be a stateful policy regarding allowed values that can be used on a session-by-session basis.   From the perspective of the draft, the handling of these cases should be clear:  The RPD and RPE fields MUST accurately reflect whether the SR complied with the DSCP1 and EC1 instructions.",
       "createdAt": "2025-11-05T19:44:24Z",
-      "updatedAt": "2025-11-05T21:54:46Z",
-      "closedAt": null,
+      "updatedAt": "2025-11-19T21:49:44Z",
+      "closedAt": "2025-11-19T21:49:44Z",
       "comments": []
     }
   ],
@@ -209,24 +209,26 @@
       "id": "PR_kwDOO2MpU86y4_I0",
       "title": "Add mention of ietf-ippm-stamp-ext-hdr",
       "url": "https://github.com/gwhiteCL/draft-whimir-ippm-stamp-cos-ecn/pull/7",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "gwhiteCL",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "fixes #5 ",
       "createdAt": "2025-11-12T04:17:37Z",
-      "updatedAt": "2025-11-13T09:36:09Z",
+      "updatedAt": "2025-11-19T21:49:25Z",
       "baseRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
       "baseRefName": "main",
       "baseRefOid": "49404803b1e5e20b7ff9a5a73546616153412f40",
       "headRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
       "headRefName": "address_#5",
       "headRefOid": "98b814a007f5f1976123e450d6aa945b1870d3ad",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-11-19T21:49:16Z",
+      "mergedAt": "2025-11-19T21:49:16Z",
+      "mergedBy": "gwhiteCL",
+      "mergeCommit": {
+        "oid": "6075fea493e0a1c400b95eb45b83d33c44076f04"
+      },
       "comments": [],
       "reviews": [
         {
@@ -249,24 +251,26 @@
       "id": "PR_kwDOO2MpU86y5K2n",
       "title": "draft text to address #6",
       "url": "https://github.com/gwhiteCL/draft-whimir-ippm-stamp-cos-ecn/pull/8",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "gwhiteCL",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "fixes #6 ",
       "createdAt": "2025-11-12T04:46:18Z",
-      "updatedAt": "2025-11-12T18:48:09Z",
+      "updatedAt": "2025-11-19T21:49:49Z",
       "baseRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
       "baseRefName": "main",
       "baseRefOid": "49404803b1e5e20b7ff9a5a73546616153412f40",
       "headRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
       "headRefName": "address_#6",
       "headRefOid": "6c659cc9b3d2f9afc64369841618b5b3154cd3a9",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-11-19T21:49:43Z",
+      "mergedAt": "2025-11-19T21:49:43Z",
+      "mergedBy": "gwhiteCL",
+      "mergeCommit": {
+        "oid": "6ec29b65dc8b7b25a1dba3082fd44da3d43e23b5"
+      },
       "comments": [],
       "reviews": [
         {
@@ -283,6 +287,34 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 9,
+      "id": "PR_kwDOO2MpU860c7EF",
+      "title": "add section 3.1 and 3.2 headers",
+      "url": "https://github.com/gwhiteCL/draft-whimir-ippm-stamp-cos-ecn/pull/9",
+      "state": "MERGED",
+      "author": "gwhiteCL",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-11-19T22:00:36Z",
+      "updatedAt": "2025-11-19T22:01:05Z",
+      "baseRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
+      "baseRefName": "main",
+      "baseRefOid": "6ec29b65dc8b7b25a1dba3082fd44da3d43e23b5",
+      "headRepository": "gwhiteCL/draft-whimir-ippm-stamp-cos-ecn",
+      "headRefName": "add-section-headers",
+      "headRefOid": "bf1afbe5e7c3e085b507912e33a2d0c2ef82b72d",
+      "closedAt": "2025-11-19T22:00:49Z",
+      "mergedAt": "2025-11-19T22:00:49Z",
+      "mergedBy": "gwhiteCL",
+      "mergeCommit": {
+        "oid": "01a5103bd17aa52112dabe015c62ca8bdcb9a776"
+      },
+      "comments": [],
+      "reviews": []
     }
   ]
 }
